@@ -102,19 +102,33 @@
     });
 
     var secs = 0;
+    var secs2 = 0;
     var callAlert = function(){ 
     secs++; 
     
     if(secs > 25){
       secs = 0;
-      //clearInterval(id);
+      clearInterval(id);
       $('.popup_box').css("display", "block");
       $('.modale').addClass('opened');
       pauseVideo();
     }
 }
 
+var callAlert2 = function(){ 
+    secs2++; 
+    
+    if(secs2 > 180){
+      secs2 = 0;
+      $('.popup_box').css("display", "block");
+      $('.modale').addClass('opened');
+      pauseVideo();
+    }
+}
+
+
    var id = setInterval(callAlert, 1000);
+   var id2 = setInterval(callAlert2, 1000);
    
 
     

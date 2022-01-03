@@ -21,12 +21,16 @@ File: Layout CSS
 .row4, .row4 a{}
 .row5, .row5 a{}
 
+.row1{
+	margin-bottom:60px;   /* Height of the footer */
+	
+}
+
 .row5{
-	position:absolute;
 	bottom:0;
 	width:100%;
 	height:60px;   /* Height of the footer */
-	background:#6cf;
+	
 }
 
 
@@ -63,10 +67,10 @@ File: Layout CSS
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{background-size:100%;/* This squashes the image - so only use a pattern of sorts */ text-align:center;}
+#pageintro{/* This squashes the image - so only use a pattern of sorts */ text-align:center;}
 #pageintro figure{padding-bottom:30px;}/* Required for the box-shadow on the image */
 #pageintro figcaption{margin:0; padding:100px 0; font-size:5rem;}
-
+/* background-size:100%; */
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
