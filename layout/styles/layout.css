@@ -21,6 +21,14 @@ File: Layout CSS
 .row4, .row4 a{}
 .row5, .row5 a{}
 
+.row5{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:60px;   /* Height of the footer */
+	background:#6cf;
+}
+
 
 /* Top Bar
 --------------------------------------------------------------------------------------------------------------- */
@@ -55,9 +63,9 @@ File: Layout CSS
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{background-size:100% 75%;/* This squashes the image - so only use a pattern of sorts */ text-align:center;}
-#pageintro figure{padding-bottom:20px;}/* Required for the box-shadow on the image */
-#pageintro figcaption{margin:0; padding:100px 0; font-size:4rem;}
+#pageintro{background-size:100%;/* This squashes the image - so only use a pattern of sorts */ text-align:center;}
+#pageintro figure{padding-bottom:30px;}/* Required for the box-shadow on the image */
+#pageintro figcaption{margin:0; padding:100px 0; font-size:5rem;}
 
 
 /* Content Area
@@ -303,12 +311,13 @@ input:focus, textarea:focus, *:required:focus{border-color:#FD8866;}
 
 
 /* Rows */
-.row0, .row0 a{color:#FFFFFF; background-color:#000000;}
-.row1{color:#474747; background-color:#FFFFFF;}
+.row0, .row0 a{color:#FFFFFF; background-color:#303030;}
+.row1{color:#474747; background-color:#000000;}
 .row2{color:#FFFFFF; background:linear-gradient(-90deg, #FD8866, #FA543A);}
 .row3{color:#474747; background-color:#FFFFFF;}
 .row4{color:#DFDFDF; background-color:#262626; border-color:#FA543A;}
-.row5, .row5 a{color:#DFDFDF; background-color:#1A1A1A;}
+.row5, .row5 a{color:#DFDFDF; background-color:#303030;}
+
 
 .coloured{color:#FFFFFF; background:linear-gradient(90deg, #FD8866, #FA543A);}
 .coloured .btn{background-color:#FD8866; border-color:#FD8866;}
@@ -317,7 +326,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#FD8866;}
 
 /* Top Bar */
 #topbar ul li{border-color:rgba(255,255,255,.4);}
-#topbar li:first-child a, #topbar a:hover{color:#FD8866;}
+#topbar li:first-child a, #topbar a:hover{color:rgb(255, 253, 253);}
 
 
 /* Header */

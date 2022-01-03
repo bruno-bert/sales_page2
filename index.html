@@ -4,6 +4,10 @@
 <title>MAKE MONEY CODING</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="popup.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -23,16 +27,12 @@
 </div>
 
 
-<div id="pageintro" class="wrapper row1 bgded" style="background-image:url('images/demo/backgrounds/1.jpg');">
+<div id="pageintro" class="wrapper row1 bgded" style="background-image:url('images/demo/backgrounds/2.jpg');">
 
  <figure class="hoc clear"> 
     <figcaption class="heading">25 Ways To Make MONEY With CODE</figcaption>
     
-    
-    <!-- <iframe width="980" height="500" src="https://www.youtube.com/embed/dRHsg6hWcNo" title="YouTube video player" frameborder="0"
-     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- -->
-
+ 
  <div id="player"></div>
 
   </figure> 
@@ -43,12 +43,15 @@
   
   <div class="modale" aria-hidden="true">
     <div class="popup_box">
+      <div style="display: block; width: 100%; text-align: right;"> <a href="#" class="btn1">Close X</a></div>
+       
       <i class="fas fa-exclamation"></i>
-      <h1>WARNING</h1>
+      <h1 style="margin-bottom: 50px;">WARNING</h1>
+     
       <label>Your data may be being stolen right now!</label>
       <div class="btns">
         <a href="https://google.com" class="btn2">Protect Me</a>
-        <a href="#" class="btn1">Keep Watching the Video</a>
+        
       </div>
     </div>
   </div>
@@ -57,12 +60,12 @@
 
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
-    <p class="fl_left">Copyright &copy; 2022 - All Rights Reserved - <a href="#">Developers SA</a></p>
-    <p class="fl_right">Created By <a target="_blank" href="#" title="Developing Solutions">Developers SA</a></p>
+    <p class="fl_left"><a href="#">Recipes 4 Life</a></p>
+    <p class="fl_right">Created By <a target="_blank" href="#" title="Recipes 4 Life">Recipes 4 Life</a></p>
 
   </div>
 </div>
-<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
@@ -99,16 +102,20 @@
     });
 
     var secs = 0;
-var id = setInterval(function(){ 
+    var callAlert = function(){ 
     secs++; 
     
-  if(secs > 5){
-    clearInterval(id);
-    $('.popup_box').css("display", "block");
-    $('.modale').addClass('opened');
-    pauseVideo();
-   }
-}, 1000);
+    if(secs > 2){
+      secs = 0;
+      //clearInterval(id);
+      $('.popup_box').css("display", "block");
+      $('.modale').addClass('opened');
+      pauseVideo();
+    }
+}
+
+   var id = setInterval(callAlert, 1000);
+   
 
     
   });
@@ -124,8 +131,7 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
+
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
@@ -135,7 +141,7 @@ function onYouTubeIframeAPIReady() {
     
     events: {
       'onReady': onPlayerReady,
-      //'onStateChange': onPlayerStateChange
+   
     }
   });
 }
@@ -149,16 +155,7 @@ function playVideo() {
   player.playVideo();
 }
 
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-//var done = false;
-/*  function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
-} */
+
 function pauseVideo() {
   player.pauseVideo();
 }
