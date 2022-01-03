@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-<title>CODE == MONEY</title>
+<title>MAKE MONEY CODING</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+
+   
+
 </head>
 <body id="top">
 
@@ -21,8 +27,23 @@
   <figure class="hoc clear"> 
     <figcaption class="heading">25 Ways To Make MONEY With CODE</figcaption>
     <!-- <img src="images/demo/980x500.png" alt="">  -->
-    <iframe width="980" height="500" src="https://www.youtube.com/embed/dRHsg6hWcNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="980" height="500" src="https://www.youtube.com/embed/dRHsg6hWcNo" title="YouTube video player" frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </figure>
+
+  
+  <div class="modale" aria-hidden="true">
+    <div class="popup_box">
+      <i class="fas fa-exclamation"></i>
+      <h1>WARNING</h1>
+      <label>Your data may be being stolen right now!</label>
+      <div class="btns">
+        <a href="https://google.com" class="btn2">Protect Me</a>
+        <a href="#" class="btn1">Keep Watching the Video</a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="wrapper row5">
@@ -37,5 +58,45 @@
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+
+
+<script>
+  $(document).ready(function(){
+    /* $('.click').click(function(){
+      $('.popup_box').css("display", "block");
+    }); */
+
+    $('.btn2').click(function(){
+      $('.popup_box').css("display", "none");
+      $('.modale').removeClass('opened');
+
+    });
+
+
+    $('.btn1').click(function(){
+      $('.popup_box').css("display", "none");
+      $('.modale').removeClass('opened');
+    });
+
+    var secs = 0;
+var id = setInterval(function(){ 
+    secs++; 
+    //console.log(secs);
+  if(secs > 5){
+    clearInterval(id);
+    $('.popup_box').css("display", "block");
+    $('.modale').addClass('opened');
+   }
+}, 1000);
+
+    
+  });
+
+
+
+
+</script>
+
+
 </body>
 </html>
