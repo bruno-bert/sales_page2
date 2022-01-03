@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-<title>MAKE MONEY CODING</title>
+<title>MAKE MONEY ONLINE</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +14,9 @@
 
 
    
-
+    <script src="layout/scripts/variables.js"></script>
 </head>
-<body id="top">
+<body id="top" style="background-color: #1A1A1A">
 
   <div class="wrapper row0">
   <div id="topbar" class="hoc clear"> 
@@ -27,10 +27,10 @@
 </div>
 
 
-<div id="pageintro" class="wrapper row1 bgded" style="background-image:url('images/demo/backgrounds/2.jpg');">
+<div id="pageintro" class="wrapper row1 bgded" style="background-image:url('images/demo/backgrounds/5.jpg');">
 
- <figure class="hoc clear"> 
-    <figcaption class="heading">25 Ways To Make MONEY With CODE</figcaption>
+ <figure class="hoc clear" > 
+    <figcaption class="heading" style="font-size: 4rem; color: blue;">How To Make $2,500/Week Passive Income With Free Traffic & Affiliate Marketing (2022)</figcaption>
     
  
  <div id="player"></div>
@@ -82,10 +82,8 @@
 
 
 
+    document.getElementsByClassName('btn2')[0].href = affiliatedLink;
 
-    /* $('.click').click(function(){
-      $('.popup_box').css("display", "block");
-    }); */
 
     $('.btn2').click(function(){
       $('.popup_box').css("display", "none");
@@ -106,7 +104,7 @@
     var callAlert = function(){ 
     secs++; 
     
-    if(secs > 25){
+    if(secs > firstTime){
       secs = 0;
       clearInterval(id);
       $('.popup_box').css("display", "block");
@@ -118,7 +116,7 @@
 var callAlert2 = function(){ 
     secs2++; 
     
-    if(secs2 > 180){
+    if(secs2 > nextTime){
       secs2 = 0;
       $('.popup_box').css("display", "block");
       $('.modale').addClass('opened');
@@ -151,7 +149,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '500',
     width: '980',
-    videoId: 'dRHsg6hWcNo',
+    videoId: 'P7bNFuXaDFU',
     
     events: {
       'onReady': onPlayerReady,
